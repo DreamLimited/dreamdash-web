@@ -28,3 +28,17 @@ The production site retains Aithm's responsive header, dark visual system,
 hero, feature, workflow, portfolio, pricing, FAQ, editorial, contact, policy,
 and footer layouts. Shop/cart/checkout pages were removed because Dream Dash is
 not presented as a self-serve retail product.
+
+## Product-language sources
+
+Public copy is grounded in the canonical DreamLimited Overview architecture,
+surface catalog, and Dream Dash operational-status page, then checked against
+the application repository's current Next.js routes and six-bucket sidebar.
+Customer-facing language preserves the Dream → Orbital → World lifecycle and
+the seven-axis O.R.B.I.T.A.L. framework. It avoids publishing internal service
+credentials, implementation details, customer claims, fabricated metrics, or
+unapproved pricing.
+
+The repeatable content enrichment pass lives in `tools/enrich-site.mjs`. It is
+idempotent and marks generated content blocks explicitly; run it after making
+structural changes to the retained Aithm pages.
