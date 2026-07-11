@@ -1,0 +1,30 @@
+/* Dream Dash production refinements layered over the licensed Aithm system. */
+.shop-button,
+.search-button,
+.cart-number {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid #6f5cff;
+  outline-offset: 3px;
+}
+
+.navbar-brand {
+  letter-spacing: -0.04em;
+}
+
+.newsletter-form input:disabled {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

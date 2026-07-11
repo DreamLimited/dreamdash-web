@@ -1,23 +1,820 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Dream Dash is the intelligent operating system for opportunity discovery, capture, proposals, approvals, and delivery readiness.">
-  <title>Dream Dash — Turn opportunity into action</title>
-  <link rel="icon" href="assets/img/all-img/favicon.png">
-  <link rel="stylesheet" href="assets/css/dreamdash.css">
-</head>
-<body>
-  <header class="nav shell"><a class="logo" href="/">Dream<span>Dash</span></a><nav aria-label="Primary"><a href="#platform">Platform</a><a href="#workflow">Workflow</a><a href="#trust">Trust</a><a href="#contact">Contact</a></nav><a class="button small" href="https://app.dreamdash.org">Open the app</a></header>
-  <main>
-    <section class="hero shell"><div class="badge"><i></i> The command center for consequential pursuits</div><h1>Turn opportunity<br>into <em>action.</em></h1><p>Dream Dash connects opportunity intelligence, capture planning, proposal production, human approvals, and delivery readiness in one intelligent workspace.</p><div class="actions"><a class="button" href="https://app.dreamdash.org">Start a pursuit <b>↗</b></a><a class="ghost" href="#platform">Explore the platform ↓</a></div><div class="console"><div class="console-bar"><span></span><span></span><span></span><small>MISSION CONTROL / ACTIVE PURSUIT</small></div><div class="console-body"><aside><b>Dream Dash</b><a class="active">Overview</a><a>Opportunities</a><a>Capture plan</a><a>Proposal room</a><a>Gates</a><a>Readiness</a></aside><section><div class="mission-head"><div><small>ACTIVE PURSUIT</small><h2>Infrastructure modernization</h2></div><span class="status">QUALIFIED</span></div><div class="metrics"><article><small>FIT SIGNAL</small><strong>High</strong><span>Evidence aligned</span></article><article><small>NEXT GATE</small><strong>Blue review</strong><span>3 actions open</span></article><article><small>READINESS</small><strong>72%</strong><span>On trajectory</span></article></div><div class="trajectory"><small>PURSUIT TRAJECTORY</small><div class="line"><i></i><i></i><i></i><i></i><i></i></div><div class="labels"><span>Discover</span><span>Qualify</span><span>Shape</span><span>Propose</span><span>Deliver</span></div></div></section></div></div></section>
-    <section class="proof"><div class="shell"><span>One operating picture</span><span>Human-governed automation</span><span>Evidence at every decision</span><span>Context that survives handoff</span></div></section>
-    <section class="platform shell" id="platform"><div class="section-intro"><small>01 / THE PLATFORM</small><h2>Every pursuit.<br>One shared truth.</h2><p>Replace disconnected spreadsheets, inboxes, documents, and status meetings with a durable system of record for the full opportunity lifecycle.</p></div><div class="cards"><article class="featured"><span>01</span><h3>Opportunity intelligence</h3><p>Bring signals, fit, risk, deadlines, and evidence into a reviewable qualification path.</p><div class="orb"></div></article><article><span>02</span><h3>Capture orchestration</h3><p>Translate strategy into owners, gates, actions, and decisions your whole team can see.</p></article><article><span>03</span><h3>Proposal production</h3><p>Coordinate compliant content, evidence, reviews, and readiness without losing the thread.</p></article><article><span>04</span><h3>Human approval gates</h3><p>Keep consequential decisions with accountable people while agents handle the coordination.</p></article><article><span>05</span><h3>Portfolio visibility</h3><p>Understand priority, confidence, constraints, and next action across every active pursuit.</p></article></div></section>
-    <section class="workflow" id="workflow"><div class="shell"><small>02 / THE WORKFLOW</small><h2>From first signal<br>to delivered outcome.</h2><div class="steps"><article><b>Discover</b><p>Continuously turn fragmented market information into structured opportunity signals.</p></article><article><b>Decide</b><p>Qualify against strategy, evidence, constraints, and an explicit human decision.</p></article><article><b>Build</b><p>Orchestrate capture, content, compliance, reviews, and approvals in one workspace.</p></article><article><b>Deliver</b><p>Carry the pursuit’s decisions and context into mobilization and execution.</p></article></div></div></section>
-    <section class="trust shell" id="trust"><div><small>03 / BUILT FOR TRUST</small><h2>Intelligence you can inspect.</h2></div><div class="trust-list"><article><h3>Human authority</h3><p>Agents prepare, coordinate, and recommend. Accountable people retain control of consequential decisions.</p></article><article><h3>Evidence-linked work</h3><p>Recommendations and outputs stay connected to their sources, assumptions, and review history.</p></article><article><h3>Durable context</h3><p>Decisions, changes, ownership, and rationale remain available throughout the lifecycle.</p></article><article><h3>Designed for boundaries</h3><p>Public, partner, internal, and service surfaces remain distinct by design.</p></article></div></section>
-    <section class="cta shell" id="contact"><div><small>YOUR NEXT PURSUIT STARTS HERE</small><h2>Make the next move<br>with clarity.</h2></div><a class="button light" href="https://app.dreamdash.org">Open Dream Dash ↗</a></section>
-  </main>
-  <footer class="shell"><a class="logo" href="/">Dream<span>Dash</span></a><p>A United Dream Limited company</p><div><a href="https://dreamlimited.net">Corporate</a><a href="mailto:hello@dreamdash.org">Contact</a></div><small>© 2026 United Dream Limited</small></footer>
-</body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dream Dash — Opportunity intelligence and pursuit orchestration</title>
+
+        <!-- CSS Linked -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/boxicons.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/dreamdash-overrides.css">
+
+        <!-- favicon Linked -->
+        <link rel="icon" type="image/png" href="assets/img/all-img/favicon.png">
+
+    </head>
+    <body>
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area style-2" id="navbar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        Dream Dash
+                    </a>
+                    <div class="other-all-option">
+                        <div class="other-option m-0 d-lg-none">
+                            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="shop-button">
+                                <i class='bx bx-shopping-bag'></i>
+                                <span class="cart-number">0</span>
+                            </button>
+                        </div>
+                        <div class="other-option d-lg-none">
+                            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" class="search-button"><i class='bx bx-search'></i></button>
+                        </div>
+                        <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
+                            <span class="burger-menu">
+                                <span class="top-bar"></span>
+                                <span class="middle-bar"></span>
+                                <span class="bottom-bar"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link active">
+                                    Home
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link active">
+                                            Dream Dash Platform
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Use Cases
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="portfolio.html" class="nav-link">
+                                            Use Cases
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="portfolio.html" class="nav-link">
+                                            Use Case Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Platform
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="services.html" class="nav-link">
+                                            Platform
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="services.html" class="nav-link">
+                                            Capability Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Resources
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="about.html" class="nav-link">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about.html" class="nav-link">
+                                            Our Team
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="faq.html" class="nav-link">
+                                            FAQ
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                            Shop
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="pricing.html" class="nav-link">
+                                                    Products List
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="pricing.html" class="nav-link">
+                                                    Products Details
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="pricing.html" class="nav-link">
+                                                    Cart
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="contact.html" class="nav-link">
+                                                    Checkout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="portfolio.html" class="nav-link">
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pricing.html" class="nav-link">
+                                            Access
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                            Tools
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="404.html" class="nav-link">
+                                                    404 Error Page
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="term-condition.html" class="nav-link">
+                                                    Term &amp; Condition
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="privacy-policy.html" class="nav-link">
+                                                    Privacy Policy
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="cookie-policy.html" class="nav-link">
+                                                    Cookie Policy
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Insights
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">
+                                            Insights
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">
+                                            Insights
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">
+                                            Blog Right Sidebar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">
+                                            Blog Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="others-option d-flex align-items-center">
+                            <div class="option-item">
+                                <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="shop-button">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <span class="cart-number">0</span>
+                                </button>
+                            </div>
+                            <div class="option-item">
+                                <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" class="search-button">
+                                    <i class='bx bx-search'></i>
+                                </button>
+                            </div>
+                            <div class="option-item">
+                                <a class="default-btn" href="contact.html"> <span>Request access</span> <i class="bx bx-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Responsive Navbar Area -->
+        <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+            <div class="offcanvas-header">
+                <a class="logo d-inline-block" href="index.html">
+                    Dream Dash
+                </a>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" id="navbarAccordion">
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                            Homes
+                        </button>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion1">
+                                    <div class="accordion-item">
+                                        <a href="index.html" class="accordion-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="index.html" class="accordion-link active">
+                                            Dream Dash Platform
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="index.html" class="accordion-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="index.html" class="accordion-link">
+                                            Dream Dash Platform
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a class="accordion-link without-icon" href="about.html">
+                            About
+                        </a>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Use Cases
+                        </button>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion2">
+                                    <div class="accordion-item">
+                                        <a href="portfolio.html" class="accordion-link">
+                                            Use Cases
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="portfolio.html" class="accordion-link">
+                                            Use Case Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Platform
+                        </button>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion3">
+                                    <div class="accordion-item">
+                                        <a href="services.html" class="accordion-link">
+                                            Platform
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="services.html" class="accordion-link">
+                                            Capability Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Resources
+                        </button>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion4">
+                                    <div class="accordion-item">
+                                        <a href="about.html" class="accordion-link">
+                                            About
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="about.html" class="accordion-link">
+                                            Our Team
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="faq.html" class="accordion-link">
+                                            FAQ
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            Shop
+                                        </button>
+                                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion11">
+                                            <div class="accordion-body">
+                                                <div class="accordion" id="navbarAccordion11">
+                                                    <div class="accordion-item">
+                                                        <a href="pricing.html" class="accordion-link">
+                                                            Products List
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="pricing.html" class="accordion-link">
+                                                            Products Details
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="pricing.html" class="accordion-link">
+                                                            Cart
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="contact.html" class="accordion-link">
+                                                            Checkout
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="portfolio.html" class="accordion-link">
+                                            Gallery
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="pricing.html" class="accordion-link">
+                                            Access
+                                        </a>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                            Tools
+                                        </button>
+                                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion10">
+                                            <div class="accordion-body">
+                                                <div class="accordion" id="navbarAccordion10">
+                                                    <div class="accordion-item">
+                                                        <a href="404.html" class="accordion-link">
+                                                            404 Error Page
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="term-condition.html" class="accordion-link">
+                                                            Term &amp; Condition
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="privacy-policy.html" class="accordion-link">
+                                                            Privacy Policy
+                                                        </a>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <a href="cookie-policy.html" class="accordion-link">
+                                                            Cookie Policy
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Insights
+                        </button>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion5">
+                                    <div class="accordion-item">
+                                        <a href="blog.html" class="accordion-link">
+                                            Insights
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="blog.html" class="accordion-link">
+                                            Insights
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="blog.html" class="accordion-link">
+                                            Blog Right Sidebar
+                                        </a>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <a href="blog.html" class="accordion-link">
+                                            Blog Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a class="accordion-link without-icon" href="contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="offcanvas-contact-info">
+                    <h4>Follow On</h4>
+                    <ul class="social-profile list-style">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                        <li><a href="https://dribbble.com" target="_blank"><i class='bx bxl-dribbble'></i></a></li>
+                        <li><a href="https://www.pinterest.com" target="_blank"><i class='bx bxl-pinterest'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Responsive Navbar Area -->
+
+
+
+
+
+        <!-- Start Hero Section -->
+        <div class="hero-section">
+            <div class="container-fluid">
+                <div class="row g-0">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="hero-content">
+                            <div class="sub-title" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="100">
+                                <p>Opportunity Intelligence</p>
+                            </div>
+                            <h2 data-aos="flip-up" data-aos-duration="2000" data-aos-delay="300"><span>Opportunity Intelligence</span> Connects Your Team, <span>Context</span> And <span>Decisions</span></h2>
+                            <div class="text-generator-box" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="200">
+                                <h3>What opportunity are you pursuing?</h3>
+                                <div class="searchwrapper">
+                                    <div class="searchbox">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-9">
+                                                <form>
+                                                    <input type="text" class="form-control" placeholder="What opportunity are you pursuing?"></div>
+                                                </div>
+                                            <div class="col-xl-3">
+                                                <form>
+                                                    <a class="btn" href="https://app.dreamdash.org">Open app</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="short-prompt" data-aos="fade-zoom-in"
+                            data-aos-duration="1000">
+                                <ul>
+                                    <li><p>Start here:</p></li>
+                                    <li><a href="portfolio.html">What is Ai?</a></li>
+                                    <li><a href="portfolio.html">Wright a Blog About Ai!</a></li>
+                                    <li><a href="portfolio.html">Help me debug</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5">
+                        <div class="hero-image" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">
+                            <div class="effect">
+                                <img class="image-effect" src="assets/img/all-img/robot.png" alt="image">
+                                <img class="image-effect" src="assets/img/all-img/robot-2.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Hero Section -->
+
+
+
+        <!-- Start Features Section -->
+        <div class="features-section ptb-100">
+            <div class="container">
+                <div class="section-title" data-aos="fade-down" data-aos-offset="100">
+                    <div class="sub-title">
+                        <p>The connected platform</p>
+                    </div>
+                    <h2>Turn opportunity into coordinated action.</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-sm-6">
+                        <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                            <span>Dream Dash</span>
+                            <div class="icon">
+                                <i class="fi fi-tr-memo-circle-check"></i>
+                            </div>
+                            <h3>Opportunity intelligence</h3>
+                            <p>Bring signals, evidence, ownership, and next actions into one reviewable operating picture.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-6">
+                        <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                            <span>Dream Dash</span>
+                            <div class="icon">
+                                <i class="fi fi-tr-hourglass-start"></i>
+                            </div>
+                            <h3>Capture orchestration</h3>
+                            <p>Bring signals, evidence, ownership, and next actions into one reviewable operating picture.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-6">
+                        <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                            <span>Dream Dash</span>
+                            <div class="icon">
+                                <i class="fi fi-tr-puzzle-alt"></i>
+                            </div>
+                            <h3>Human approval gates</h3>
+                            <p>Bring signals, evidence, ownership, and next actions into one reviewable operating picture.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-6">
+                        <div class="feature-box"   data-aos="fade-up" data-aos-delay="400">
+                            <span>Dream Dash</span>
+                            <div class="icon">
+                                <i class="fi fi-tr-copy-image"></i>
+                            </div>
+                            <h3>Durable pursuit context</h3>
+                            <p>Bring signals, evidence, ownership, and next actions into one reviewable operating picture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- End Features Section -->
+
+       <!-- Start Pursuit Context -->
+       <div class="text-animation-area">
+            <div class="container-fluid">
+                <div class="text-wapper-content">
+                    <div class="text-left">
+                        <span>Opportunity Intelligence</span>
+                        <span>Pursuit Context</span>
+                        <span>Human Authority</span>
+                        <span>Evidence Linked</span>
+                        <span>Approval Gates</span>
+                        <span>Portfolio View</span>
+                        <span>Delivery Ready</span>
+                        <span>Capture Strategy</span>
+                    </div>
+                    <div class="text-left right">
+                        <span>Pursuit Context</span>
+                        <span>Delivery Ready</span>
+                        <span>Approval Gates</span>
+                        <span>Portfolio View</span>
+                        <span>Capture Strategy</span>
+                        <span>Human Authority</span>
+                        <span>Evidence Linked</span>
+                        <span>Opportunity Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Pursuit Context -->
+
+       <!-- Start About Section -->
+       <div class="about-section-2">
+            <div class="container">
+                <div class="about-1">
+                    <div class="row align-items-top">
+                        <div class="col-xl-6 col-md-7">
+                            <div class="img-wrapper">
+                                <div class="img-box" data-aos="fade-up" data-aos-offset="100">
+                                    <img class="image-box-item" src="assets/img/all-img/about-5.png" alt="image">
+                                    <img class="image-box-item" src="assets/img/all-img/about-7.png" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-5">
+                            <div class="about-content-2" data-aos="fade-down" data-aos-offset="100">
+                                <div class="sub-title-1">
+                                    <p>Why Dream Dash</p>
+                                </div>
+                                <h2>Run consequential pursuits with one shared truth.</h2>
+                                <p>Dream Dash replaces disconnected spreadsheets, inboxes, documents, and status meetings with a durable system of record for the full opportunity lifecycle.</p>
+                                <a class="default-btn" href="about.html"> <span>About</span> <i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-2">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-5">
+                            <div class="about-content-2" data-aos="fade-down" data-aos-offset="100">
+                                <div class="counter">
+                                    <p>Dream Dash replaces disconnected spreadsheets, inboxes, documents, and status meetings with a durable system of record for the full opportunity lifecycle.</p>
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-4 col-lg-4 col-sm-4 col-md-6 col-6">
+                                            <div class="counter-content">
+                                                <h2>Signal</h2>
+                                                <p>Discover</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-sm-4 col-md-6 col-6">
+                                            <div class="counter-content">
+                                                <h2>Human</h2>
+                                                <p>Decide</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-sm-4 col-md-6 col-6">
+                                            <div class="counter-content">
+                                                <h2>Ready</h2>
+                                                <p>Deliver</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-7">
+                            <div class="img-wrapper part-1">
+                                <div class="img-box part-1" data-aos="fade-up" data-aos-offset="100">
+                                    <img class="image-box-item" src="assets/img/all-img/about-4.png" alt="image">
+                                    <img class="image-box-item" src="assets/img/all-img/about-6.png" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About Section -->
+
+        <!-- Start video Section -->
+        <a class="video-url popup-youtube" href="https://youtu.be/VDVHbd3nNrM?si=atnpL-PwDDJ8DX6h">
+            <div class="video-section vid-bg-2">
+                <span id="tooltip">play</span>
+            </div>
+        </a>
+        <!-- Start video Section -->
+
+
+
+
+
+        <!-- Start Footer Area -->
+        <div class="footer-area">
+            <div class="footer-widget-info ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 col-md-12">
+                            <div class="subscribe-area">
+                                <h2>Stay connected to the mission.</h2>
+                                <p>Dream Dash is the intelligent operating system for consequential pursuits.</p>
+                                <div class="subscribe-wrapper">
+                                    <div class="subscribe-box">
+                                        <form action="mailto:hello@dreamdash.org" method="post">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Your email address @" name="EMAIL" required autocomplete="off">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <button type="submit" class="btn">Contact us</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-md-4">
+                            <div class="footer-widget">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="portfolio.html">Gallery</a></li>
+                                    <li><a href="portfolio.html">Use Cases</a></li>
+                                    <li><a href="about.html">Developers</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-md-4">
+                            <div class="footer-widget">
+                                <h4>Resource</h4>
+                                <ul>
+                                    <li><a href="blog.html">Insights</a></li>
+                                    <li><a href="term-condition.html">Term of services</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-md-4">
+                            <div class="footer-widget">
+                                <h4>Office</h4>
+                                <span>United Dream Limited</span>
+                                <a class="ft-mail" href="mailto:hello@dreamdash.org">hello@dreamdash.org</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="cpr-left">
+                                <p>Copyright © 2026 United Dream Limited. All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="cpr-right">
+                                <ul>
+                                    <li><a href="term-condition.html">Term of services</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Area -->
+
+        <div class="go-top active">
+            <i class="bx bx-up-arrow-alt"></i>
+        </div>
+
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/nice-select.min.js"></script>
+        <script src="assets/js/magnific-popup.min.js"></script>
+        <script src="assets/js/jquery.mixitup.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
