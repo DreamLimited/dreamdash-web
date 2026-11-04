@@ -1,0 +1,15 @@
+# dreamdash-web CI, validation only. Static site: no build, publish or deploy job is part of this pipeline.
+#
+# Validation-only CI, no build, container, publish or deploy jobs. Uses the
+# DroidOpsInc/launch-sequence "validate-only" pipeline (lint, SAST, brand
+# gate, canary). Merge-request and default-branch pipelines run the gates;
+# every other pipeline gets the always-green pipeline-canary.
+
+include:
+  - project: DroidOpsInc/launch-sequence
+    ref: main
+    file: /pipelines/validate-only.yml
+
+variables:
+  # Guard the two GitHub Pages invariants from AGENTS.md: CNAME and .nojekyll.
+  PREFLIGHT_COMMANDS: "test \"$(cat CNAME)\" = dreamdash.org && test -f .nojekyll && echo ok"
