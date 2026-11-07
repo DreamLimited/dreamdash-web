@@ -13,6 +13,8 @@
 - Preserve `CNAME` with `dreamdash.org` and preserve `.nojekyll`.
 - Do not add authentication or product backend code to this repository.
 - Optimize images and scripts before adding dependencies.
+- Fonts are self-hosted (`assets/fonts/`, declared at the top of `assets/css/style.css`); do not reintroduce a Google Fonts `@import`.
+- `assets/fonts/boxicons.woff2` is a subset of the glyphs the pages use. After adding an icon to a page, run `python3 scripts/subset-boxicons.py` (needs `fonttools` and `brotli`); it subsets from `boxicons.ttf`.
 - Maintain WCAG 2.2 AA keyboard, contrast, and semantic HTML standards where practical.
 
 ## Content rules
